@@ -79,6 +79,8 @@ local function extract_olk(f, path)
 		out:close()
 		f:seek("set", spot)
 	end
+	print("")
+	
 	for i=1, #files do
 		local nf = io.open(files[i]..".dat", "rb")
 		extract_olk(nf, files[i])
